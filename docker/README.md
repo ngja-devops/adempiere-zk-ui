@@ -17,11 +17,20 @@ gradle createRelease
 docker build -t adempiere-zk-tomcat -f docker/tomcat/Dockerfile .
 ```
 
-## Run a Container
+##Build With Jetty 
+```
+docker build -t adempiere-zk-jetty -f docker/tomcat/Dockerfile .
+```
+
+## Run a Container with apache tomcat
 ```
 docker run -d -e "ADEMPIERE_DB_SERVER=database-server" -e "ADEMPIERE_DB_PORT=5432" adempiere-zk-tomcat
 ```
 
+## Run a Container with apache tomcat
+```
+docker run -d -e "ADEMPIERE_DB_SERVER=database-server" -e "ADEMPIERE_DB_PORT=5432" adempiere-zk-jetty
+```
 
 ## Environment variables
 - `ADEMPIERE_DB_TYPE`: Database Type (Supported Oracle, PostgreSQL and MariaDB). Default **PostgreSQL**
