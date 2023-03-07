@@ -19,7 +19,7 @@ docker build -t adempiere-zk-tomcat -f docker/tomcat/Dockerfile .
 
 ##Build With Jetty 
 ```
-docker build -t adempiere-zk-jetty -f docker/tomcat/Dockerfile .
+docker build -t adempiere-zk-jetty -f docker/jetty/Dockerfile .
 ```
 
 ## Run a Container with apache tomcat
@@ -27,11 +27,18 @@ docker build -t adempiere-zk-jetty -f docker/tomcat/Dockerfile .
 docker run -d -e "ADEMPIERE_DB_SERVER=database-server" -e "ADEMPIERE_DB_PORT=5432" adempiere-zk-tomcat
 ```
 
-## Run a Container with apache tomcat
+## Run a Container with Jetty
 ```
 docker run -d -e "ADEMPIERE_DB_SERVER=database-server" -e "ADEMPIERE_DB_PORT=5432" adempiere-zk-jetty
 ```
-
+## Run docker compose
+```
+cd docker/compose
+```
+##Run Docker Compose
+```
+docker compose up -d
+```
 ## Environment variables
 - `ADEMPIERE_DB_TYPE`: Database Type (Supported Oracle, PostgreSQL and MariaDB). Default **PostgreSQL**
 - `ADEMPIERE_DB_SERVER`: Hostname for PostgreSQL server. Default: **localhost**
