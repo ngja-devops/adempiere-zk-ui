@@ -24,8 +24,10 @@ repositories {
     mavenLocal()
 }
 
-def baseVersion = '3.9.4'
+def baseVersion = 'erpya-3.9.4-rc-1.0.4'
+def baseGroupId = 'com.erpya'
 sourceCompatibility = 1.11
+def privateDependencyBaseVersion = "adempiere-3.9.4"
 dependencies {
     implementation fileTree(
         dir: 'lib',
@@ -35,32 +37,32 @@ dependencies {
     )
 
 	//	ADempiere Core
-	implementation "io.github.adempiere:base:${baseVersion}"
-	implementation "io.github.adempiere:point-of-sales:${baseVersion}"
-	implementation "io.github.adempiere:store:${baseVersion}"
-	implementation "io.github.adempiere:distribution:${baseVersion}"
-	implementation "io.github.adempiere:freight:${baseVersion}"
-	implementation "io.github.adempiere:store:${baseVersion}"
-	implementation "io.github.adempiere:human-resource-and-payroll:${baseVersion}"
-	implementation "io.github.adempiere:extend:${baseVersion}"
-	implementation "io.github.adempiere:migration:${baseVersion}"
-	implementation "io.github.adempiere:asset:${baseVersion}"
-	implementation "io.github.adempiere:crm:${baseVersion}"
-	implementation "io.github.adempiere:production:${baseVersion}"
-	implementation "io.github.adempiere:project:${baseVersion}"
-	implementation "io.github.adempiere:request:${baseVersion}"
-	implementation "io.github.adempiere:adempiere.test:${baseVersion}"
-	implementation "io.github.adempiere:cashflow:${baseVersion}"
-	implementation "io.github.adempiere:manufacturing:${baseVersion}"
-	implementation "io.github.adempiere:wms:${baseVersion}"
-	implementation "io.github.adempiere:openid-authentication:${baseVersion}"
-	implementation "io.github.adempiere:investment-and-loan:${baseVersion}"
-	implementation "io.github.adempiere:time-and-attendance:${baseVersion}"
-	implementation "io.github.adempiere:loan:${baseVersion}"
-	implementation "io.github.adempiere:discord-notifier:${baseVersion}"
-	implementation "io.github.adempiere:telegram-notifier:${baseVersion}"
-	implementation "io.github.adempiere:tools:${baseVersion}"
-	implementation "io.github.adempiere:jasperreports:${baseVersion}"
+	implementation "${baseGroupId}:base:${baseVersion}"
+	implementation "${baseGroupId}:point-of-sales:${baseVersion}"
+	implementation "${baseGroupId}:store:${baseVersion}"
+	implementation "${baseGroupId}:distribution:${baseVersion}"
+	implementation "${baseGroupId}:freight:${baseVersion}"
+	implementation "${baseGroupId}:store:${baseVersion}"
+	implementation "${baseGroupId}:human-resource-and-payroll:${baseVersion}"
+	implementation "${baseGroupId}:extend:${baseVersion}"
+	implementation "${baseGroupId}:migration:${baseVersion}"
+	implementation "${baseGroupId}:asset:${baseVersion}"
+	implementation "${baseGroupId}:crm:${baseVersion}"
+	implementation "${baseGroupId}:production:${baseVersion}"
+	implementation "${baseGroupId}:project:${baseVersion}"
+	implementation "${baseGroupId}:request:${baseVersion}"
+	implementation "${baseGroupId}:adempiere.test:${baseVersion}"
+	implementation "${baseGroupId}:cashflow:${baseVersion}"
+	implementation "${baseGroupId}:manufacturing:${baseVersion}"
+	implementation "${baseGroupId}:wms:${baseVersion}"
+	implementation "${baseGroupId}:openid-authentication:${baseVersion}"
+	implementation "${baseGroupId}:investment-and-loan:${baseVersion}"
+	implementation "${baseGroupId}:time-and-attendance:${baseVersion}"
+	implementation "${baseGroupId}:loan:${baseVersion}"
+	implementation "${baseGroupId}:discord-notifier:${baseVersion}"
+	implementation "${baseGroupId}:telegram-notifier:${baseVersion}"
+	implementation "${baseGroupId}:tools:${baseVersion}"
+	implementation "${baseGroupId}:jasperreports:${baseVersion}"
 	
 
 	// ADempiere External Libraries
