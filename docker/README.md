@@ -12,12 +12,12 @@ gradle createRelease
 
 ```
 
-##Build With Apache Tomcat 
+## Build With Apache Tomcat 
 ```
 docker build -t adempiere-zk-tomcat -f docker/tomcat/Dockerfile .
 ```
 
-##Build With Jetty 
+## Build With Jetty 
 ```
 docker build -t adempiere-zk-jetty -f docker/jetty/Dockerfile .
 ```
