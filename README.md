@@ -58,6 +58,34 @@ You can generate a war file using the follow command
 gradle war
 ```
 
+## Run with Docker Compose
+
+You can also run it with `docker compose` for develop enviroment. Note that this is a easy way for start the service with PostgreSQL and middleware.
+
+### Requirements
+
+- [Docker Compose v2.16.0 or later](https://docs.docker.com/compose/install/linux/)
+
+```Shell
+docker compose version
+Docker Compose version v2.16.0
+```
+
+## Run it
+
+Just go to `docker-compose` folder and run it
+
+```Shell
+cd docker-compose
+```
+
+```Shell
+docker compose up
+```
+
+Open browser in the follow url [http://localhost:8888/webui/](http://localhost:8888/webui/)
+
+
 This will be generated in `adempiere-zk-ui/build/libs/adempiere-zk-ui.war`
 
 
