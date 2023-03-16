@@ -22,6 +22,8 @@ A swing User Interface based in adempiere box
 
 This project just treat of run ADempiere ZK UI based on base adempiere box project using gradle
 
+![ADempiere ZK](docs/ADempiere_ZK.gif)
+
 ## Requirements
 
 This project is a java client using swing interface and completely based on gradle package management
@@ -85,6 +87,8 @@ docker compose up
 
 Open browser in the follow url [http://localhost:8888/webui/](http://localhost:8888/webui/)
 
+
+![ADempiere ZK](docs/Docker_Compose_ZK.gif)
 
 This will be generated in `adempiere-zk-ui/build/libs/adempiere-zk-ui.war`
 
