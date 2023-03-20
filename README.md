@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/license-GNU/GPL%20(v2)-blue" alt="License">
   </a>
   <a href="https://github.com/adempiere/zk-ui/releases/latest">
-    <img src="https://img.shields.io/github/release/adempiere/adempiere-zk-ui.svg" alt="GitHub release">
+    <img src="https://img.shields.io/github/release/adempiere/zk-ui.svg" alt="GitHub release">
   </a>
   <a href="https://discord.gg/T6eH6A7PJZ">
     <img src="https://badgen.net/badge/discord/join%20chat" alt="Discord">
