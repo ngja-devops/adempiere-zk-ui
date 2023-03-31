@@ -22,12 +22,19 @@ apply plugin: "org.gretty"
 repositories {
     mavenCentral()
     mavenLocal()
+    maven {
+    	url = System.getenv("GITHUB_DEPLOY_REPOSITORY") ?: System.properties['deploy.repository'] ?: 'https://maven.pkg.github.com'
+        credentials {
+        	username = System.getenv("GITHUB_DEPLOY_USER") ?: System.properties['deploy.user']
+            password = System.getenv("GITHUB_DEPLOY_TOKEN") ?: System.properties['deploy.token'] 
+		}
+	}
 }
 
-def baseVersion = 'erpya-3.9.4-rc-1.0.4'
-def baseGroupId = 'com.erpya'
 sourceCompatibility = 1.11
-def privateDependencyBaseVersion = "adempiere-3.9.4"
+def baseVersion = '3.9.4'
+def baseGroupId = 'io.github.adempiere'
+def customBaseVersion = "adempiere-3.9.4"
 dependencies {
     implementation fileTree(
         dir: 'lib',
