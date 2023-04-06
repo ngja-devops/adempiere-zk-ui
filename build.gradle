@@ -190,6 +190,7 @@ task startJettyRunner(type: JavaExec) {
 task createRelease(type: Copy) {
    dependsOn build
    from file("$buildDir/distributions/")
+   from file("$buildDir/libs/")
    into file("$buildDir/release/")
    doLast {
         file('build/release/')
