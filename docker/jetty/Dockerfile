@@ -1,4 +1,4 @@
-FROM jetty:10.0.11-jdk11
+FROM jetty:10.0.11-jdk11-alpine
 LABEL manteiner=cparada@erpya.com
 	
 ENV ADEMPIERE_HOME="/opt/Adempiere" \
@@ -14,12 +14,10 @@ ENV ADEMPIERE_HOME="/opt/Adempiere" \
 COPY --chown=jetty:jetty docker/AdempiereTemplate.properties $ADEMPIERE_HOME/Adempiere.properties
 COPY --chown=jetty:jetty docker/jetty/settings/jetty-ds.xml $JETTY_BASE
 COPY --chown=jetty:jetty docker/jetty/settings/adempiere.sh $JETTY_BASE/bin/
-COPY --chown=jetty:jetty build/libs/zk-ui.war $JETTY_BASE/webapps/webui.war
-COPY --chown=jetty:jetty build/libs/zk-ui.jar $JETTY_BASE/lib/ext
-COPY --chown=jetty:jetty build/distributions/zk-ui.zip $JETTY_BASE/lib/ext
+COPY --chown=jetty:jetty docker/jetty/zk-ui/zk-ui.war $JETTY_BASE/webapps/webui.war
+COPY --chown=jetty:jetty docker/jetty/zk-ui/lib/*.jar $JETTY_BASE/lib/ext/
 
-RUN	unzip $JETTY_BASE/lib/ext/zk-ui.zip -j -o -d $JETTY_BASE/lib/ext/ && \
-	rm -R $JETTY_BASE/lib/ext/javaee-api* $JETTY_BASE/lib/ext/zk-ui.zip && \
+RUN	rm -R $JETTY_BASE/lib/ext/javaee-api*  && \
 	chmod +x $JETTY_BASE/bin/adempiere.sh  && \
 	/generate-jetty-start.sh
 	
