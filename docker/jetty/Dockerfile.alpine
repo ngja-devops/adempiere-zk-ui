@@ -1,4 +1,4 @@
-FROM jetty:10.0.11-jdk11
+FROM jetty:10.0.11-jdk11-alpine
 LABEL manteiner=cparada@erpya.com
 	
 ENV ADEMPIERE_HOME="/opt/Adempiere" \
