@@ -11,7 +11,17 @@ Copyright (C) 2007 Ashley G Ramdass.
 <?link rel="stylesheet" type="text/css" href="css/PAPanel.css"?>
 <?link rel="stylesheet" type="text/css" href="theme/default/css/color.css.dsp"?>
 <?link rel="stylesheet" type="text/css" href="theme/default/css/img.css.dsp"?>
+<?link rel="stylesheet" type="text/css" href="theme/default/css/theme.css.dsp"?>
+<?link rel="stylesheet" type="text/css" href="theme/default/css/themeie.css.dsp"?>
+<?link rel="stylesheet" type="text/css" href="theme/default/css/thememoz.css.dsp"?>
 <?script type="text/javascript" defer="defer" src="js/jquery-3.2.1.min.js" ?>
+<?script type="text/javascript" defer="defer" src="js/calc.js" ?>
+<?script type="text/javascript" defer="defer" src="js/layout.js" ?>
+<?script type="text/javascript" defer="defer" src="js/report.js" ?>
+<?script type="text/javascript" defer="defer" src="js/persist-min.js" ?>
+<?script type="text/javascript" defer="defer" src="js/token.js" ?>
+<?script type="text/javascript" defer="defer" src="js/text_action.js" ?>
+
 <zk>
 	<script>
 		var zkTimeoutText = "The page or component you request is no longer available. This is normally caused by timeout or rebooting the server.";
