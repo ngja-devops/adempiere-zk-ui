@@ -23,7 +23,7 @@ services:
       - adempiere_network
             
   adempiere-zk:
-    image: openls/adempiere-zk-ui:jetty-alpine-rs-1.0.0
+    image: openls/adempiere-zk-ui:jetty-alpine-rs-1.0.4
     container_name: ${ADEMPIERE_NAME}
     restart: ${GENERIC_RESTART}
     ports:
