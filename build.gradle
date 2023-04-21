@@ -143,9 +143,9 @@ sourceSets {
             srcDirs 'client/src/main/java'
         }
         resources {
-            srcDirs 'src/main/client'
-			srcDirs 'src/main/install'
+            srcDirs 'client/src/main/java'
 			srcDirs 'src/main/webapp'
+			srcDirs 'src/main/webapp/WEB-INF/src/'
             include 'org/compiere/images/**.*'
             include 'org/adempiere/plaf/icons/**.*'
             include 'org/compiere/plaf/sounds/**.*'
@@ -185,6 +185,7 @@ sourceSets {
             include 'js/**.*'
             include 'css/**.*'
             include 'zul/**.*'
+            include 'org/adempiere/legacy/apache/ecs/ecs.properties'
         }
     }
 }
