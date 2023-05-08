@@ -186,6 +186,7 @@ sourceSets {
             include 'css/**.*'
             include 'zul/**.*'
             include 'org/adempiere/legacy/apache/ecs/ecs.properties'
+            include 'org/adempiere/version.properties'
         }
     }
 }
