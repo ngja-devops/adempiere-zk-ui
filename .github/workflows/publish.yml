@@ -27,8 +27,14 @@ jobs:
           java-version: 11
           architecture: x64
       
-      - name: Set Version
-        run: echo "MAIN_VERSION=${{ github.event.release.name }}\nDATE_VERSION=$(date +'%Y-%m-%d')\nIMPLEMENTATION_VERSION=${{ github.event.release.tag_name }}" > client/src/main/java/org/adempiere/version.properties
+      - name: Set Main Version
+        run: echo "MAIN_VERSION=${{ github.event.release.name }}" >> client/src/main/java/org/adempiere/version.properties
+      
+      - name: Set Release Date
+        run: echo "DATE_VERSION=$(date +'%Y-%m-%d')" >> client/src/main/java/org/adempiere/version.properties
+      
+      - name: Set Implementation Version
+        run: echo "IMPLEMENTATION_VERSION=${{ github.event.release.tag_name }}" >> client/src/main/java/org/adempiere/version.properties
 
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
