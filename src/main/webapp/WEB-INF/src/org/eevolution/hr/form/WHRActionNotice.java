@@ -13,7 +13,7 @@
  * Contributor(s): Oscar Gomez & Victor Perez www.e-evolution.com             *
  * Copyright (C) 2003-2011 e-Evolution,SC. All Rights Reserved.               *
  *****************************************************************************/
-package org.eevolution.form;
+package org.eevolution.hr.form;
 
 import java.awt.event.ActionEvent;
 import java.math.BigDecimal;
