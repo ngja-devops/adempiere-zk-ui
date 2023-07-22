@@ -75,11 +75,13 @@ public final class ThemeManager {
         try
         {
             MImage image = MImage.get(Env.getCtx(), imageId);
-            String logoFilePath = Executions.getCurrent().getDesktop().getWebApp().getRealPath("") + File.separator + logoFile;
-            FileOutputStream outStream = new FileOutputStream(logoFilePath);
-            outStream.write(image.getBinaryData());
-            outStream.close();
-            retLogoPath = logoFile;
+            if(image.getBinaryData() != null) {
+            	String logoFilePath = Executions.getCurrent().getDesktop().getWebApp().getRealPath("") + File.separator + logoFile;
+                FileOutputStream outStream = new FileOutputStream(logoFilePath);
+                outStream.write(image.getBinaryData());
+                outStream.close();
+                retLogoPath = logoFile;
+            }
         }
         catch (Exception ex)
         {
