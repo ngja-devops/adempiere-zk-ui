@@ -71,7 +71,11 @@ dependencies {
 	implementation "${baseGroupId}:tools:${baseVersion}"
 	implementation "${baseGroupId}:jasperreports:${baseVersion}"
 	
-
+	implementation "${baseGroupId}:adempiere-business-processors:1.0.9"
+	implementation "${baseGroupId}:adempiere-jwt-token:1.0.2"
+	implementation "${baseGroupId}:adempiere-dashboard-improvements:1.0.7"
+	implementation "${baseGroupId}:adempiere-pos-improvements:1.0.0"
+	implementation "${baseGroupId}:adempiere-kafka-connector:1.0.0"
 	// ADempiere External Libraries
 	implementation 'com.github.jjYBdx4IL:ecs:1.4.2.1'
 	implementation 'org.telegram:telegrambots:6.0.1'
