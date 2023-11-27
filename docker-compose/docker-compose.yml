@@ -23,6 +23,9 @@ services:
       - adempiere_network
             
   adempiere-zk:
+    build:
+      context: docker/jetty/
+      dockerfile: Dockerfile
     image: openls/adempiere-zk-ui:jetty-alpine-rs-1.0.4
     container_name: ${ADEMPIERE_NAME}
     restart: ${GENERIC_RESTART}
